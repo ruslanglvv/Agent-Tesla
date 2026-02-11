@@ -91,10 +91,10 @@ This analysis highlights the effectiveness of combining static and dynamic appro
 	sha256: 8FF5AE82390178A13604AA06329C05295BA6631BFACC4FAB7004B56EFEE885D6
 
 
-- filename: DT9.txt 
+- filename: DT9.txt <br>
 	sha256: EA70E6C8908AC145D3AE65214BBF7DFA0509EE0044BEF2141733D09002AE0280
 
-- filename: file2.exe
+- filename: file2.exe <br>
 	sha256: 968BF956EB1730D73B90695D96ABA0C3589EDCF967FADC596A32DB78D6BFB6CD
 
 - hxxps://delp-heizungsbau.de/DT9.txt
