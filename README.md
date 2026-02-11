@@ -36,9 +36,9 @@ Upon reviewing the downloaded file, multiple obfuscated variables were identifie
 
 The variable `r0t0r` underwent additional processing, where all trailing occurrences of the character “W” were replaced with “00”, effectively restoring the original binary byte representation.
    
-   ![photo6](Screenshots/photo6.png)
+![photo6](Screenshots/photo6.png)
 
- The identified function performs byte-level reconstruction, effectively decoding the data from its obfuscated representation.
+The identified function performs byte-level reconstruction, effectively decoding the data from its obfuscated representation.
 
 The variables `y74gh00rffd` and `TOgr` were also processed in a similar manner: the `">_"` sequence at the end of the strings was replaced with `"0x"`, which represents the standard hexadecimal prefix. This technique was used to conceal the actual hexadecimal values within the code.
 
@@ -47,6 +47,7 @@ The variables `y74gh00rffd` and `TOgr` were also processed in a similar manner: 
 
 The extracted files were saved in `.BIN` format to preserve their original binary structure.  
 Subsequent analysis of the files’ properties was performed using Detect It Easy (DIE) to determine file type and characteristics.
+
 ![photo9](Screenshots/photo9.png)
 ![photo10](Screenshots/photo10.png)
 
