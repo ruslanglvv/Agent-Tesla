@@ -10,21 +10,21 @@ In this report i will analyze sample of this malware that was uploaded to Malwar
 ### Analysis
 
 
-![[photo1.jpg]]
+![[Screenshots\photo1.png]]
 
 
 
 After downloading the sample, an initial inspection of the file revealed the presence of an obfuscated command string, indicating potentially malicious behavior.
 
-![[photo2.png]]
+![[Screenshots\photo2.png]]
 
 Using the decoding function identified in the code, the obfuscated command string was successfully decrypted, resulting in the following output:
 
-![[photo3.png]]
+![[Screenshots\photo3.png]]
 
 After manual refactoring and cleanup, the code was transformed into a readable and structured form suitable for further analysis.
 
-![[photo4.png]]
+![[Screenshots\photo4.png]]
 
 The analysis revealed that execution of the program results in the download of a file named **DT9.txt** from a remote source.
 
@@ -32,47 +32,47 @@ To further investigate its contents, the file was retrieved manually using the `
 
 Upon reviewing the downloaded file, multiple obfuscated variables were identified, indicating that the file likely contains an additional encoded payload.
 
-![[photo5.png]]
+![[Screenshots\photo5.png]]
 
 The variable `r0t0r` underwent additional processing, where all trailing occurrences of the character “W” were replaced with “00”, effectively restoring the original binary byte representation.
    
-   ![[photo6.png]]
+   ![[Screenshots\photo6.png]]
 
  The identified function performs byte-level reconstruction, effectively decoding the data from its obfuscated representation.
 
 The variables `y74gh00rffd` and `TOgr` were also processed in a similar manner: the `">_"` sequence at the end of the strings was replaced with `"0x"`, which represents the standard hexadecimal prefix. This technique was used to conceal the actual hexadecimal values within the code.
 
-![[photo7.png]]
-![[photo8.png]]
+![[Screenshots\photo7.png]]
+![[Screenshots\photo8.png]]
 
 The extracted files were saved in `.BIN` format to preserve their original binary structure.  
 Subsequent analysis of the files’ properties was performed using Detect It Easy (DIE) to determine file type and characteristics.
-![[photo9.png]]
-![[photo10.png]]
+![[Screenshots\photo9.png]]
+![[Screenshots\photo10.png]]
 
 The first file was identified as a DLL, while the second was an executable (EXE); both were developed using the .NET framework.  
 
 The EXE was packed and protected using obfuscation techniques, preventing successful static decompilation.
 
-![[photo11.png]]
+![[Screenshots\photo11.png]]
 
 After unpacking the GZIP archive, dynamic analysis of the sample was conducted. As the managed assembly was loaded directly into memory at runtime, the MegaDumper tool was employed to extract it. 
 The sample was executed within an isolated virtual environment, allowing MegaDumper to successfully dump all loaded .NET assemblies from the process memory.
 
-![[photo12.png]]
+![[Screenshots\photo12.png]]
 
-![[photo13.jpg]]
+![[Screenshots\photo13.jpg]]
 
 The extracted file was successfully decompiled using dnSpy.  
 
 Code analysis revealed that the malware operates as an information stealer and keylogger, exfiltrating collected data via the SMTP protocol.
 
-![[photo14.png]]
+![[Screenshots\photo14.png]]
 
 The malware collects system information, including operating system details, processor specifications, and stored user credentials, enabling the exfiltration of sensitive data.
 
 
-![[photo15.png]]
+![[Screenshots\photo15.png]]
 
 Hardcoded SMTP authentication credentials, including an email address and password, were found in the malware code.
 
