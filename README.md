@@ -87,11 +87,11 @@ The dumped assembly was successfully decompiled in dnSpy, enabling identificatio
 This analysis highlights the effectiveness of combining static and dynamic approaches for examining protected .NET malware samples.
 ### IOCs
 
-- filename: doc20241402070611.img /n
+- filename: doc20241402070611.img <br>
 	sha256: 8FF5AE82390178A13604AA06329C05295BA6631BFACC4FAB7004B56EFEE885D6
 
 
-- filename: DT9.txt /n
+- filename: DT9.txt 
 	sha256: EA70E6C8908AC145D3AE65214BBF7DFA0509EE0044BEF2141733D09002AE0280
 
 - filename: file2.exe
