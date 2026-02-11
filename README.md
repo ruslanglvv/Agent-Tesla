@@ -54,14 +54,14 @@ The first file was identified as a DLL, while the second was an executable (EXE)
 
 The EXE was packed and protected using obfuscation techniques, preventing successful static decompilation.
 
-![photo11](Screenshots/photo11.png)
+![photo11](Screenshots/photo11.jpg)
 
 After unpacking the GZIP archive, dynamic analysis of the sample was conducted. As the managed assembly was loaded directly into memory at runtime, the MegaDumper tool was employed to extract it. 
 The sample was executed within an isolated virtual environment, allowing MegaDumper to successfully dump all loaded .NET assemblies from the process memory.
 
 ![photo12](Screenshots/photo12.png)
 
-![photo13](Screenshots/photo13.jpg)
+![photo13](Screenshots/photo13.png)
 
 The extracted file was successfully decompiled using dnSpy.  
 
